@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Block from "../components/block";
-import Product from "../types/Product";
+import Category from "../components/Category";
+import {Product} from "../types/Product";
 
 const Home: NextPage<{products:Product[]}> = ({products}) => {
 
 
   return <div>
-
     <Block products={products}/>
+    <div className=" w-20 mx-auto h-1 bg-dark_color-500 rounded mt-2 mb-4"></div>
+    <Category/>
   </div>;
 };
 
@@ -19,12 +21,18 @@ export const getServerSideProps: GetServerSideProps = async (
 ) => {
 
   let response = await fetch('https://fakestoreapi.com/products?limit=6')
-  let data:Product[] = await response.json()
-  console.log(data.length);
-  
+  if (response.ok) {
+    let data:Product[] = await response.json();
+    return {
+      props: {
+        products: data
+      }
+    };
+  }
   return {
     props: {
-      products: data
+      products: []
     }
-  };
+  }
+
 };

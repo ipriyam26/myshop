@@ -36,7 +36,13 @@ function Navbar() {
                   return (
                     
                     <li key={item} className="text-base md:text-xl">
-                    <Link href={`/${item}`}>{item}</Link>
+                    {
+                      item=="Home"?
+                      <Link href="/">{item}</Link>
+                      :
+  
+                  <Link href={`/${item}`}>{item}</Link> 
+                    }
                   </li>
                 );
               })
@@ -61,7 +67,13 @@ function Navbar() {
               return (
     
                 <li key={item} className="text-base md:text-xl">
+                  {
+                    item=="Home"?
+                    <Link href="/">{item}</Link>
+                    :
+
                 <Link href={`/${item}`}>{item}</Link>
+                  }
               </li>
             );
           })
@@ -71,9 +83,7 @@ function Navbar() {
 </div>
     </div>
   );
-  return (
-    <div>Navbar</div>
-  )
+
 }
 
 export default Navbar

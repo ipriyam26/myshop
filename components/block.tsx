@@ -1,13 +1,13 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import React from "react";
-import Product from "../types/Product";
+import {Product} from "../types/Product";
 
 const ProductHomeBlock:NextPage<{product:Product}> = (props) =>{
   return (
     <div className="lg:w-1/3 sm:w-1/2 p-4 ">
       <div className="flex relative">
-        <div className="absolute inset-x-20  w-full h-full ">
+        <div className="absolute   w-full h-full ">
           <Image
             src={props.product.image}
             alt={props.product.title}
@@ -16,8 +16,8 @@ const ProductHomeBlock:NextPage<{product:Product}> = (props) =>{
           />
         </div>
 
-        <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-          <h2 className="tracking-widest text-sm title-font font-medium capitalize text-indigo-400 mb-1">
+    <div className="px-8 py-10 relative z-10 w-full border-4 border-light_color-500 bg-dark_color-500 opacity-0 hover:opacity-100">
+          <h2 className="tracking-widest text-sm title-font font-medium capitalize text-light_color-500 mb-1">
             {props.product.category}
           </h2>
           <h1 className="title-font text-lg font-medium text-white mb-3">
@@ -32,8 +32,8 @@ const ProductHomeBlock:NextPage<{product:Product}> = (props) =>{
 
 const Block: NextPage<{ products: Product[] }> = ({ products }) => (
     <div>
-        <section className="text-gray-400 bg-gray-900 body-font">
-            <div className="container px-5 py-24 mx-auto">
+        <section className="text-gray-400 bg-medium_color-500 body-font">
+            <div className="container px-5 py-16 mx-auto">
                 <div className="flex flex-col text-center w-full mb-20">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
                         Our Top Products

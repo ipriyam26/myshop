@@ -1,6 +1,6 @@
 
 
-export default interface Product{
+export  interface Product{
     id:number,
     title:string,
     price:number,
@@ -8,4 +8,9 @@ export default interface Product{
     category:string,
     image:string,
     rating:{rate:number,count:number}
+}
+export interface Category{
+    title:string,
+    description:string,
+    link:string
 }
