@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import {Product} from "../types/Product";
 
-const ProductHomeBlock:NextPage<{product:Product}> = (props) =>{
+const ProductHomeBlock: NextPage<{product:Product}> = (props) =>{
   return (
     <div className="lg:w-1/3 sm:w-1/2 p-4 ">
       <div className="flex relative">
@@ -39,11 +39,11 @@ const Block: NextPage<{ products: Product[] }> = ({ products }) => (
                         Our Top Products
                     </h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                        If you&apos; re looking for the perfect gift for the coder in your life,
-                        look no further than the Coding Merch Store! We&apos; ve got everything
+                        If you&apos;re looking for the perfect gift for the coder in your life,
+                        look no further than the Coding Merch Store! We&apos;ve got everything
                         from T-shirts and hoodies emblazoned with code to mugs and
                         mousepads featuring your favorite programming languages. Whether
-                        they&apos; re a beginner or a seasoned pro, we&apos; ve got something for
+                        they&apos;re a beginner or a seasoned pro, we&apos;ve got something for
                         everyone.
                     </p>
                 </div>
