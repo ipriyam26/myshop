@@ -9,9 +9,7 @@ const CategoryBlock:NextPage<{category:Category}> = ({category}) => {
   return (
     <div className="p-4 lg:w-1/3">
       <div className="h-full bg-dark_color-500 bg-opacity-70 px-8 pt-16 pb-16 rounded-lg overflow-hidden text-center relative">
-        <h2 className="tracking-widest text-xs title-font font-medium text-light_color-500 mb-3">
-          CATEGORY
-        </h2>
+
         <h1 className="title-font sm:text-2xl text-xl font-medium text-very_light_color-500 mb-3">
           {category.title}
         </h1>

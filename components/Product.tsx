@@ -18,7 +18,7 @@ const Product: NextPage<{ product: Product }> = ({ product }) => {
           ></Image>
         </a>
         <div className="mt-4">
-          <h2 className="text-white title-font text-lg font-medium">
+          <h2 className="text-white title-font text-xl font-medium">
             {product.title.slice(0, 30)}
           </h2>
           <p className="mt-1">${product.price}</p>
@@ -35,11 +35,11 @@ const Product: NextPage<{ product: Product }> = ({ product }) => {
               width={200}
             ></Image>
           </div>
-          <div className=" -mt-1 space-y-1">
+          <div className=" -mt-1 space-y-2">
             <h3 className=" font-bold text-very_light_color-500">{product.title.slice(0, 30)}</h3>
             <div className="flex space-x-2 text-light_color-500">
-              <h4 className=" text-sm">${product.price}</h4>
-              <p className="flex space-x-1 text-sm">
+              <h4 className=" text-base">${product.price}</h4>
+              <p className="flex space-x-1 text-base">
                 <AiFillStar className=" text-yellow-300 mt-1" />
                 <p>
                   {product.rating.rate}({product.rating.count})
