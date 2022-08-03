@@ -21,8 +21,12 @@ export const getServerSideProps: GetServerSideProps = async (
 ) => {
 
   let response = await fetch('https://fakestoreapi.com/products?limit=6')
+
+  
   if (response.ok) {
     let data:Product[] = await response.json();
+    console.log(data);
+    
     return {
       props: {
         products: data

@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import { BsCartFill } from 'react-icons/bs';
 import { SiCodesandbox } from 'react-icons/si';
+import Drawer from './Drawer';
+import ShopCartCard from './ShopCartCard';
 
 function Navbar() {
     const router = useRouter();
@@ -12,6 +14,8 @@ function Navbar() {
   route = route==""?"Home":route;
   var result: string[] = all_routes;
   const [open, setOpen] = useState<Boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
 
   return (
     <div>
@@ -51,7 +55,7 @@ function Navbar() {
               </ul>
             </div>
         </div>
-        <BsCartFill className="logo text-3xl md:text-4xl" />
+        <BsCartFill onClick={()=>{ setIsOpen(true) }} className="logo text-3xl md:text-4xl" />
       </nav>
 <div className=' lg:hidden'>
     {
@@ -81,6 +85,12 @@ function Navbar() {
         }
         </ul>}
 </div>
+<Drawer isOpen={isOpen} setIsOpen={setIsOpen}  >
+    <ShopCartCard/>
+    <ShopCartCard/>
+    <ShopCartCard/>
+    <ShopCartCard/>
+  </Drawer>
     </div>
   );
 
