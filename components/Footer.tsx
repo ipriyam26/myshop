@@ -11,9 +11,9 @@ function Footer() {
       <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
 <SiCodesandbox className=' text-5xl'/>
-        <span className="ml-3 text-xl capitalize">codewear</span>
+        <span className="ml-3 text-xl capitalize">Codewear</span>
       </a>
-      <p className="mt-2 text-sm text-gray-500">Code so good that they ask for plag check</p>
+      <p className="mt-2 text-sm text-gray-500">Code so good that they ask for plague check</p>
     </div>
     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
