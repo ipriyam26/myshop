@@ -24,9 +24,7 @@ export const getServerSideProps: GetServerSideProps = async (
 
   
   if (response.ok) {
-    let data:Product[] = await response.json();
-    console.log(data);
-    
+    let data:Product[] = await response.json(); 
     return {
       props: {
         products: data

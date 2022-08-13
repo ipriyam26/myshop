@@ -29,7 +29,7 @@ const Product: NextPage<{ product: Product }> = ({ product }) => {
         <div className="flex space-x-2 " >
           <div className=" object-center  p-2 bg-dark_color-500 rounded-tl rounded-bl">
             <Image
-              alt={product.title.split(" ").slice(0, 5).join(" ")}
+              alt={product.title.split(" ").slice(0, 4).join(" ")}
               src={product.image}
               height={180}
               width={180}

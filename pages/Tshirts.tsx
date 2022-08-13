@@ -38,7 +38,7 @@ const Tshirts: NextPage<{ products: Product[] }> = ({ products }) => {
             products.map(
               (product, index) => {
                 if(index==0){
-                  return <div className="mt-2.5">
+                  return <div className="mt-3">
                     <ProductC  product={product}  key={product.id}/>
                   </div>
                 }
